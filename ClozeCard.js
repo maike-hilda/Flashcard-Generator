@@ -12,10 +12,17 @@
 // The constructor should throw or log an error when the cloze deletion does not appear in the input text.
 // Use prototypes to attach these methods, wherever possible.
 
-module.exports = ClozeCard;
-
 function ClozeCard(text, cloze) {
     this.cloze = cloze;
-    this.partialText = text.replace(cloze, '');
+    this.partialTextFun = function() {
+        if (text.includes(cloze)) {
+            return text.replace(cloze, '');
+        } else {
+            console.log("The cloze you entered does not show up in the text.")
+        }
+    };
+    this.partialText = this.partialTextFun();
     this.fullText = text
 }
+
+module.exports = ClozeCard;
