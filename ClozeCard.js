@@ -3,9 +3,9 @@ function ClozeCard(text, cloze) {
         return new ClozeCard(text, cloze);
     }
     this.cloze = cloze;
-    this.partialTextFun = function() {
+    this.partialTextFun = function () {
         if (text.includes(cloze)) {
-            return text.replace(cloze, '');
+            return text.replace(cloze, "");
         } else {
             console.log("The cloze you entered does not show up in the text.")
         }
