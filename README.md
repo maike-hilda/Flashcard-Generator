@@ -1,2 +1,2 @@
 # Flashcard-Generator
-Different types of flashcards to study
+Constructors for Flash Cards
